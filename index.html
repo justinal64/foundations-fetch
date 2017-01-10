@@ -9,13 +9,31 @@
 </head>
 
 <body ng-app="">
-    <div>
-        1 + 1 = {{1 + 1}}
-    </div>
-    <div>
-        The answer should be 2...
-    </div>
+    <form action="demo_form.asp">
+        <div>
+            Url <input type="text" name="url">
+        </div>
+        <div>
+            <select ng-model="method">
+                <option value="Get">Get</option>
+                <option value="Post">Post</option>
+                <option value="Put">Put</option>
+                <option value="Delete">Delete</option>
+            </select>
+        </div>
+        <input type="submit" ng-click="???" value="Fetch">
+    </form>
 </body>
 
 
 </html>
+
+
+<!--
+Your Home page should have a text input (for URL), Done
+select/dropdown (containing HTTP methods) and a Done
+"Fetch" button all centered on the page. Done
+The user should be able to select an HTTP Method from the dropdown. Done
+Clicking the "Fetch" button will make an AJAX call to the specified URL. 
+Your drop-down element should contain/allow for the user to use the GET, POST, OPTIONS and HEAD HTTP methods.
+-->
