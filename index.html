@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="fetchApp">
 
 <head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
-<body ng-app="">
-    <form action="demo_form.asp">
-        <div>
-            Url <input type="text" name="url">
-        </div>
-        <div>
-            <select ng-model="method">
+
+<body class="centered" ng-controller="MainController">
+
+    <div>
+        Url <input type="text" ng-model="url">
+        <button ng-click="fetch()">CLick Me!</button>
+    </div>
+    <ul>
+        <li ng-repeat="response in responses">
+            {{response.statusCode}}
+        </li>
+    </ul>
+    <!--<div>
+        <select ng-model="method">
                 <option value="Get">Get</option>
                 <option value="Post">Post</option>
                 <option value="Put">Put</option>
                 <option value="Delete">Delete</option>
-            </select>
-        </div>
-        <input type="submit" ng-click="???" value="Fetch">
-    </form>
+        </select>
+    </div>-->
+    <!--<input type="submit" ng-click="" value="Fetch">-->
 </body>
 
 
